@@ -1,0 +1,29 @@
+{
+    "manifest_version": 2,
+    "name": "LC_Difficulty_Eliminator",
+    "version": "2.0",
+  
+    "description": "Hides the difficulty of problems on Leetcode.",
+    
+    "homepage_url" : "",
+    
+    "icons": {
+      "48": "icons/leetcode_difficulty_eliminator_48.png"
+    },
+    
+    "permissions": ["activeTab"],
+    
+    "browser_action": {
+      "default_icon": "icons/leetcode_difficulty_eliminator_32.png",
+      "default_title": "Leetcode Difficulty Eliminator",
+      "default_popup": "popup/toggle.html"
+    },
+    
+    "content_scripts": [
+      {
+        "matches": ["*://*.leetcode.com/*"],
+        "js": ["index.js"]
+      }
+    ]
+  }
+  
